@@ -1,0 +1,57 @@
+
+<div id="mainbox">
+
+<div id="header">
+    <%- include('./partials/header.ejs') %>
+    
+</div>
+
+<div id="rigthside">
+    
+    <ul id="info">
+        <li class="li li1">Episodes : <%= anime.episodes%></li> 
+       
+        <li class="li li2">Type : <%= anime.type %></li>
+       
+        <li class="li li3">Duration : <%= anime.duration %></li>
+
+        <li class="li li4">Rank : <%= anime.rank %></li>
+
+        <li class="li li5">Synopsis : <br> <%= anime.synopsis %></li>
+    </ul>
+</div>
+
+<div id="main">
+    <h1 id="title">Anime Random Card</h1>
+
+    <% if(locals.anime){ %>
+        <h2 id="name">
+            <%= anime.title %>
+        </h2>
+        <div id="box">
+            <img src="<%= anime.images.jpg.large_image_url %>" alt=" <%= anime.title %> " id="img">
+    
+        </div>
+       
+        
+    <%  }else{ %>
+        <p id="parrafo">
+            Anime data not found
+        </p>
+    <% } %>
+
+</div>
+
+<div id="leftside">
+    <button id="button">Click for Nex Card</button>
+</div>
+
+
+<div id="footer">
+    <%- include('./partials/footer.ejs') %>
+</div>
+
+</div>
+
+
+
